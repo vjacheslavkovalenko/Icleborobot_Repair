@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_48"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_shop"
+            android:icon="@drawable/ic_shopping_cart_black_48"
+            android:title="@string/menu_shop" />
+        <item
+            android:id="@+id/nav_aksessuary"
+            android:icon="@drawable/ic_category_black_48"
+            android:title="@string/menu_aksessuary" />
+        <item
+            android:id="@+id/nav_remont"
+            android:icon="@drawable/ic_build_black_48"
+            android:title="@string/menu_remont" />
+        <item
+            android:id="@+id/nav_rassrochka"
+            android:icon="@drawable/ic_currency_exchange_black_48"
+            android:title="@string/menu_rassrochka" />
+        <item
+            android:id="@+id/nav_dostavka"
+            android:icon="@drawable/ic_local_shipping_black_48"
+            android:title="@string/menu_dostavka" />
+        <item
+            android:id="@+id/nav_kontakty"
+            android:icon="@drawable/ic_place_black_48"
+            android:title="@string/menu_kontakty" />
+    </group>
 
 </menu>
