@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">Icleborobot Repair</string>
+    <string name="app_name">icleborobot</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Белробототехника</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Главная</string>
+    <string name="menu_shop">Каталог</string>
+    <string name="menu_aksessuary">Запчасти</string>
+    <string name="menu_remont">Ремонт</string>
+    <string name="menu_rassrochka">Рассрочка</string>
+    <string name="menu_dostavka">Доставка</string>
+    <string name="menu_kontakty">Контакты</string>
+
+    <string name="check_connection_text">Интернет-соединение отсутствует</string>
+
+    <string name="website_domain">www.icleborobot.by</string>
+    <string name="website_url">https://icleborobot.by</string>
+    <string name="website_shop">https://icleborobot.by/shop/</string>
+    <string name="website_aksessuary">https://icleborobot.by/product-category/aksessuary/</string>
+    <string name="website_remont">https://icleborobot.by/remont/</string>
+    <string name="website_rassrochka">https://icleborobot.by/karty-rassrochek/</string>
+    <string name="website_dostavka">https://icleborobot.by/dostavka/</string>
+    <string name="website_kontakty">https://icleborobot.by/kontakty/</string>
 </resources>
