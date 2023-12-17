@@ -7,23 +7,21 @@ import android.view.KeyEvent
 import android.view.Menu
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.appcompat.app.AlertDialog
 import by.icleborobot_repair.databinding.ActivityMainBinding
 import by.icleborobot_repair.databinding.ContentMainBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var binding_content: ContentMainBinding
-
+    private lateinit var dialog : AlertDialog
    // val webView = findViewById<WebView>(R.id.xml_webview)
-
-//нижеидущую строчку добавил:
- //   lateinit var webView:WebView
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -35,18 +33,22 @@ class MainActivity : AppCompatActivity() {
         binding_content.xmlWebview.settings.javaScriptEnabled=true
         binding_content.xmlWebview.webViewClient = WebViewClient()
 
-        //val urlWeb = getString(R.string.website_url)
-        //изменил это на нижеидущее:
-        //val webView = findViewById<WebView>(R.id.xml_webview)
-       // webView = findViewById<WebView>(R.id.xml_webview)
+        dialog = MaterialAlertDialogBuilder(this , R.style.MaterialAlertDialog_Rounded)
+            .setView(R.layout.custom_dialog)
+            .setCancelable(false)
+            .create()
 
+        val networkManager = NetworkManager(this)
+        networkManager.observe(this){
 
-        //webView.webViewClient = WebViewClient()
-        //webView.loadUrl(urlWeb)
-
-       // val webSettings=webView.settings
-
-       // webSettings.javaScriptEnabled=true
+            if (!it){
+                if (!dialog.isShowing)
+                    dialog.show()
+            }else{
+                if (dialog.isShowing)
+                    dialog.hide()
+            }
+        }
 
     }
 
